@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task 3</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <link href='https://fonts.googleapis.com/css?family=Karla' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      font-family: 'Karla', sans-serif;
+      /* Use Karla as the primary font */
+    }
+
+
+    header,
+    footer {
+      flex-shrink: 0;
+    }
+
+    main {
+      flex: 1;
+    }
+
+    .line-with-text {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+
+      position: relative;
+    }
+
+    .line {
+      flex: 1;
+      border: none;
+      border-top: 1px solid #17416880;
+
+      margin: 0;
+    }
+
+    .text {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      background: white;
+
+      padding: 0 10px;
+
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md" style="border-bottom: 1px solid #D9D9D9">
+    <div class=" max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+
+        <div class="flex flex-1 items-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="img/logo2.png" alt="Your Company">
+            <a href="#" class="ml-3 text-sm font-medium text-gray-500 hover:text-gray-700">
+              <span class="text-[#F16429]" style="color: #F16429; font-weight: 600; font-size: 18px;">Workfall</span>
+              <p class="text-[#FCB28E]" style="color: #FCB28E ;">Find the very best</p>
+            </a>
+          </div>
+
+          <div class="hidden sm:flex sm:space-x-4 sm:ml-6">
+            <a href="#"
+              class="text-sm font-medium text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              style="color: #000000; font-weight: 500; font-size: 16px;">Pricing</a>
+            <a href="#"
+              class="text-sm font-medium text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              style="color :#000000;  font-weight: 500; font-size: 16px;">Blog</a>
+            <a href="#"
+              class="text-sm font-medium text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              style="color: #000000;  font-weight: 500; font-size: 16px;">Stories</a>
+            <a href="#"
+              class="text-sm font-medium text-gray-500 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              style="color: #000000;  font-weight: 500; font-size: 16px;">Want to Work with us?</a>
+            <a href="#"
+              class="text-sm font-medium text-[#F16429] hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md"
+              style="color:#F16429;font-weight: 500; font-size: 16px;">Hire Now</a>
+          </div>
+        </div>
+
+        <!-- Right Aligned Content -->
+        <div class="hidden sm:flex sm:items-center sm:space-x-4">
+          <a href="tel:+16509002022" class="text-sm text-gray-500 hover:text-gray-700"
+            style="color: #A7A7A7; font-weight: 500; font-size: 16px;">+1 650 900 2022</a>
+          <a href="mailto:contact@workfall.com" class="text-sm text-gray-500 hover:text-gray-700"
+            style="color: #A7A7A7;  font-weight: 500; font-size: 16px;">contact@workfall.com</a>
+          <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-500 hidden sm:block">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded focus:outline-none focus:shadow-outline"
+              type="button" style="background-color: #FF6745;color:  #FFFFFF;font-weight: 500; font-size: 16px;">
+              LogIn
+            </button>
+          </a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <div class=" absolute inset-y-0 right-0 flex items-center sm:hidden">
+          <button type="button"
+            class="inline-flex items-center justify-center p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+            aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
+            <span class="sr-only">Open main menu</span>
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+              aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="sm:hidden hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pt-2 pb-3">
+        <a href="#"
+          class="text-base font-medium text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color: #000000; font-weight: 500; font-size: 16px;">Pricing</a>
+        <a href="#"
+          class="text-base font-medium text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color: #000000; font-weight: 500; font-size: 16px;">Blog</a>
+        <a href="#"
+          class="text-base font-medium text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color: #000000; font-weight: 500; font-size: 16px;">Stories</a>
+        <a href="#"
+          class="text-base font-medium text-gray-900 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color: #000000; font-weight: 500; font-size: 16px;">Want to Work with us?</a>
+        <a href="#"
+          class="text-base font-medium text-[#F16429] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color:#F16429;font-weight: 500; font-size: 16px;">Hire Now</a>
+        <a href="tel:+16509002022"
+          class="text-base font-medium text-gray-500 hover:text-gray-700 block px-3 py-2 rounded-md"
+          style="color: #A7A7A7;  font-weight: 500; font-size: 16px;">+1 650 900 2022</a>
+        <a href="mailto:contact@workfall.com"
+          class="text-base font-medium text-gray-500 hover:text-gray-700 block px-3 py-2 rounded-md"
+          style="color: #A7A7A7;  font-weight: 500; font-size: 16px;">contact@workfall.com</a>
+        <a href="#"
+          class="text-base font-medium text-[#F16429] hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md"
+          style="color:#F16429;font-weight: 500; font-size: 16px;">
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-1 rounded focus:outline-none focus:shadow-outline"
+            type="button" style="background-color: #FF6745;color:  #FFFFFF;font-weight: 500; font-size: 16px;">
+            LogIn
+          </button>
+        </a>
+
+
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    // JavaScript to handle mobile menu toggle
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const menu = document.getElementById('mobile-menu');
+      const isOpen = menu.classList.contains('hidden');
+      menu.classList.toggle('hidden', !isOpen);
+      this.setAttribute('aria-expanded', !isOpen);
+    });
+  </script>
+
+
+  <main class="flex flex-wrap h-full">
+    <article class="w-full md:w-1/2 bg-gray-100 p-4 flex items-center justify-center"
+      style="background-color: #FBF7F4;">
+
+      <div class="text-center">
+        <h2 class="text-lg font-semibold">
+          <img src="img/image.png">
+        </h2>
+
+      </div>
+    </article>
+
+    <header class="w-full md:w-1/2 p-12 flex items-center justify-center bg-gray-100" style="background-color: white">
+      <form class="bg-white rounded px-8 pt-6 pb-8 mb-4 w-full max-w-md">
+        <!-- Welcome Message -->
+        <div class="mb-4" style="color: #000000;font-weight: 700;font-size: 40px;">
+          <h2 class="text-xl font-bold">Welcome back! Sign in to access </h2>
+          <h2 class="text-xl font-bold"> your Workfall account</h2>
+        </div>
+
+        <!-- Sign Up Prompt -->
+        <div class="mb-4 ">
+          <h2 style="color:#174168;">Don't have a Workfall account? <a href="#" class="text-blue-500"
+              style="color: #F16429;font-weight: 600;">Sign Up</a></h2>
+        </div>
+
+        <!-- Google Sign In -->
+        <div class="mb-4">
+          <div class="relative flex items-center justify-center border border-gray-300 rounded py-2"
+            style="border: 1px solid #0185FF33; font-weight: 600;">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 mr-2" alt="Google Logo">
+            <span class="font-semibold text-gray-700 text-sm" style="color:#174168;">Sign up with Google</span>
+          </div>
+
+        </div>
+
+        <div class="mb-4 text-center">
+          <!-- <h2>Or<a href="#" class="text-blue-500"></a></h2> -->
+          <div class="line-with-text">
+            <hr class="line">
+            <span class="text" style="color:#174168;font-weight: 700;">or</span>
+          </div>
+
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="email" type="email" placeholder="Email Address">
+        </div>
+
+        <!-- Password -->
+        <div class="mb-6 relative">
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            id="password" type="password" placeholder="Password">
+          <i class="far fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 cursor-pointer"
+            id="togglePassword"></i>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="mb-4">
+          <button
+            class="shadow appearance-none border rounded w-full py-2 px-3  leading-tight focus:outline-none focus:shadow-outline"
+            type="button" style="background-color: #FF6745; color:  #FFFFFF;">
+            Sign In
+          </button>
+        </div>
+      </form>
+    </header>
+  </main>
+  <script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#password');
+
+    togglePassword.addEventListener('click', function (e) {
+      // toggle the type attribute
+      const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+      password.setAttribute('type', type);
+      // toggle the eye / eye slash icon
+      this.classList.toggle('fa-eye-slash');
+    });
+  </script>
+
+
+  <footer class="bg-white dark:bg-gray-900" style="background-color: #232323;">
+    <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
+      <div class="md:flex md:justify-between">
+        <div class="mb-6 md:mb-0 px-12">
+          <a href="https://workfall.com/" class="flex items-center">
+            <img src="img/logo2.png" class="h-8 me-3" alt="workfall Logo" style="width: 62px;height: 48px;" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white "
+              style="color:#F16429;font-weight: 500; font-size: 30px;">
+              &nbsp; Workfall</span>
+          </a>
+        </div>
+        <div class="grid grid-cols-2 gap-1 sm:gap-6 sm:grid-cols-3">
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              style="color:  #FCB28E;font-weight: 700; font-size: 18px;">
+              Quick
+              Links</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium" style="font-weight: 500; font-size: 16px">
+              <li class="mb-4">
+                <a href="https://workfall.com/" class="hover:underline" style="color: #e7e5e4;">Blogs</a>
+              </li>
+              <li>
+                <a href="https://tailwindcss.com/" class="hover:underline" style="color: #e7e5e4;">Stories</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              style="color:  #FCB28E;font-weight: 700; font-size: 18px">
+              Contact us</h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium" style="font-weight: 500; font-size: 16px">
+              <li class="mb-4">
+                <a href="https://github.com/themesberg/workfall" class="hover:underline "
+                  style="color: #e7e5e4;">contact@workfall.com</a>
+              </li>
+              <li>
+                <a href="https://discord.gg/4eeurUVvTy" class="hover:underline" style="color: #e7e5e4;">+1 650 900
+                  2022</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white"
+              style="color:  #FCB28E;font-weight: 700; font-size: 18px">
+              Follow us on : </h2>
+            <ul class="text-gray-500 dark:text-gray-400 font-medium">
+              <li class="mb-4">
+                <a href="#" class="hover:underline"></a>
+                <ul  class="flex justify-center mt-5 space-x-2">
+                  <li>
+                    <img src="img/fb.png">
+
+                  </li>
+                  <li>
+                    <img src="img/twt.png">
+                  </li>
+                  <li>
+                    <img src="img/ins.png">
+                  </li>
+                  <li>
+                    <img src="img/li.png">
+                  </li>
+
+                </ul>
+
+              </li>
+              <li>
+                <a href="#" class="hover:underline"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between"
+        style="font-weight: 500; font-size: 16px">
+        <div class="flex space-x-4 px-12">
+          <span class="text-sm text-gray-500 dark:text-gray-400 ">
+            <a href="https://workfall.com/" class="hover:underline" style="color: #e7e5e4;">Privacy Policy</a>
+          </span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">
+            <a href="https://workfall.com/" class="hover:underline" style="color: #e7e5e4;">Cookies Policy</a>
+          </span>
+          <span class="text-sm text-gray-500 dark:text-gray-400">
+            <a href="https://workfall.com/" class="hover:underline" style="color: #e7e5e4;">Terms of Service</a>
+          </span>
+        </div>
+        <div class="flex justify-center flex-grow mx-11">
+          <span class="text-sm text-gray-500 dark:text-gray-400" style="color: #e7e5e4;">
+            © 2024 <a href="https://workfall.com/" class="hover:underline">Workfall , Inc</a>
+          </span>
+        </div>
+        <div class="flex my-6 mx-15 space-x-4">
+          <img src="img/visa.png" alt="Visa">
+          <img src="img/Mastercardicon.png" alt="Mastercard">
+          <img src="img/layer.png" alt="Layer">
+          <img src="img/unionPay.png" alt="UnionPay">
+          <img src="img/Stripeimg.png" alt="Stripe">
+          <img src="img/nImage.png" alt="Image">
+          <img src="img/mercury.png" alt="Mercury">
+          <img src="img/DocuSign.png" alt="DocuSign">
+          <img src="img/AWS.png" alt="AWS">
+        </div>
+
+      </div>
+
+    </div>
+
+
+    </div>
+  </footer>
+</body>
+
+</html>
